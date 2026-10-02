@@ -7,8 +7,8 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: hostname
-        run: hostname
+        run: echo "${{ github.head_ref || github.ref_name }}"
